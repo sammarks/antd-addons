@@ -1,3 +1,9 @@
+.idea
+/*.js
+/*.js.map
+!/.eslintrc.js
+!/.neutrinorc.js
+
 # Logs
 logs
 *.log

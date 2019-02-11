@@ -1,0 +1,10 @@
+{
+  "InfiniteList": {
+    "noMoreResults": "No more results.",
+    "nothingElse": "Nothing else to see here!"
+  },
+  "ErrorIndicator": {
+    "header": "Oh dear!",
+    "content": "Something went very wrong. Try again, and if the issue keeps happening, contact support."
+  }
+}
