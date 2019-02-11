@@ -1,8 +1,7 @@
 # Summary
 
-## Introduction
+## Getting Started
 
-* [Introduction](README.md)
 * [Getting Started](getting-started.md)
 
 ## Ant Extensions
