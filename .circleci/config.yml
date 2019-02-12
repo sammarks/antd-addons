@@ -20,13 +20,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn lint
-      - run:
-          name: Jest Suite
-          command: yarn test --ci --testResultsProcessor="jest-junit"
-          environment:
-            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
-      - store_test_results:
-          path: reports
       - persist_to_workspace:
           root: ~/repo
           paths: .
