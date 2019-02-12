@@ -6,5 +6,19 @@
   "ErrorIndicator": {
     "header": "Oh dear!",
     "content": "Something went very wrong. Try again, and if the issue keeps happening, contact support."
+  },
+  "SelectButton": {
+    "selected": "Selected {{name}}:",
+    "select": "Select {{name}}"
+  },
+  "FilterButton": {
+    "selected": "{{name}}:",
+    "select": "Filter by {{name}}"
+  },
+  "SingleSelectButton": {
+    "addItem": "Create {{name}}"
+  },
+  "SelectButtonContent": {
+    "filter": "Filter"
   }
 }

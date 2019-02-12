@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import InfiniteScroll from 'react-infinite-scroller'
 import { Spin, Icon } from 'antd'
 import List from './List'
-import { withTranslation } from '../i18n'
+import { withNamespaces } from '../i18n'
 
-@withTranslation()
+@withNamespaces()
 export default class InfiniteList extends React.Component {
   static propTypes = {
     data: PropTypes.arrayOf(PropTypes.object),

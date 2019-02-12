@@ -1,6 +1,7 @@
 .idea
 /*.js
 /*.js.map
+/*.css
 !/.eslintrc.js
 !/.neutrinorc.js
 
