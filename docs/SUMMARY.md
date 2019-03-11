@@ -3,6 +3,7 @@
 ## Getting Started
 
 * [Getting Started](getting-started.md)
+* [Internationalization](internationalization.md)
 
 ## Ant Extensions
 
