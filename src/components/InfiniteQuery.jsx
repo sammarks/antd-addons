@@ -43,7 +43,10 @@ export default class InfiniteQuery extends React.Component {
         notifyOnNetworkStatusChange
       >
         {({ data, loading, error, fetchMore, refetch }) => {
-          if (error) return <ErrorIndicator compact={this.props.compact} />
+          if (error) {
+            console.error(error)
+            return <ErrorIndicator compact={this.props.compact} />
+          }
           this._refetch = refetch
           const query = get(data, this.props.queryPath, {})
           const edges = query.edges || []
