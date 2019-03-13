@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/sammarks/antd-addons/compare/v0.2.0...v0.3.0) (2019-03-13)
+
+
+### Features
+
+* Log the error whenever a query returns an error in InfiniteQuery. ([93c985f](https://github.com/sammarks/antd-addons/commit/93c985f))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/sammarks/antd-addons/compare/v0.1.2...v0.2.0) (2019-03-11)
 
