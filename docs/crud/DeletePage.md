@@ -1,0 +1,3 @@
+# DeletePage
+
+Add some documentation.
