@@ -20,5 +20,42 @@
   },
   "SelectButtonContent": {
     "filter": "Filter"
+  },
+  "ModelCRUD": {
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "CreatePage": {
+    "created": "{{model}} created successfully.",
+    "error": "There was an error creating that {{model}}.",
+    "title": "Create {{model}}",
+    "submit": "Create {{model}}",
+    "cancel": "Cancel"
+  },
+  "DeletePage": {
+    "success": "{{model}} <1>{{name}}</1> deleted successfully.",
+    "error": "There was an error deleting that {{model}}.",
+    "title": "Delete {{model}}",
+    "message": "Are you sure you want to delete the <1>{{name}}</1> {{model}}?",
+    "cancel": "No, Keep",
+    "delete": "Yes, Delete"
+  },
+  "EditPage": {
+    "edited": "{{model}} saved successfully.",
+    "error": "There was an error editing that {{model}}.",
+    "title": "Edit {{model}}",
+    "submit": "Save {{model}}",
+    "cancel": "Cancel"
+  },
+  "ViewPage": {
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "DataTable": {
+    "add": "Add {{model}}",
+    "bulkActions": "Bulk Actions",
+    "edit": "Edit",
+    "delete": "Delete"
   }
 }

@@ -13,6 +13,11 @@
 
 * [ErrorIndicator](content/ErrorIndicator.md)
 
+## CRUD
+
+* [Using the CRUD Components](crud/guide.md)
+* [CRUDContext](crud/CRUDContext.md)
+
 ## GraphQL Data
 
 * [InfiniteList](graphql/InfiniteList.md)

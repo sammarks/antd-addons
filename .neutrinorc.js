@@ -1,3 +1,5 @@
+const nodeExternals = require('webpack-node-externals')
+
 module.exports = {
   options: {
     output: '.'
@@ -10,6 +12,14 @@ module.exports = {
       }
     }],
     (neutrino) => {
+      neutrino.config.externals([nodeExternals(), (context, request, callback) => {
+        if (Object.keys(neutrino.options.mains).filter((mainKey) => {
+          return request === `./${mainKey}`
+        }).length > 0) {
+          return callback(null, `commonjs ${request}`)
+        }
+        callback()
+      }])
       neutrino.config.module.rule('compile').use('babel').tap(options => {
         const decoratorsPlugin = require.resolve('babel-plugin-transform-decorators-legacy')
         const classPropertiesPlugin = require.resolve('babel-plugin-transform-class-properties')
