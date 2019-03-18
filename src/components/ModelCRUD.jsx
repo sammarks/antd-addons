@@ -77,7 +77,6 @@ export default class ModelCRUD extends React.Component {
       editRoute: `${this.props.match.url}/:id/edit`,
       deleteRoute: `${this.props.match.url}/:id/delete`
     }
-    console.log('ModelCRUD', context)
     return (
       <CRUDContext.Provider value={context}>
         {this.props.useBreadcrumbs ? this.renderBreadcrumbRoutes() : this.renderRoutes()}
