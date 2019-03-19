@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.2"></a>
+## [0.5.2](https://github.com/sammarks/antd-addons/compare/v0.5.0...v0.5.2) (2019-03-19)
+
+
+### Bug Fixes
+
+* Make sure ModelSelect is handling modals properly. ([f4b22bc](https://github.com/sammarks/antd-addons/commit/f4b22bc))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/sammarks/antd-addons/compare/v0.4.0...v0.5.0) (2019-03-19)
 
