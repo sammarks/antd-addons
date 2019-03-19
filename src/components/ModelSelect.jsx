@@ -34,6 +34,10 @@ export default class ModelSelect extends React.Component {
     this.props.onChange(selected ? selected.id : null)
   }
 
+  onModalClosed = () => {
+    this.setState({ createSelected: false })
+  }
+
   render () {
     let modal, onCreate
 
@@ -42,13 +46,18 @@ export default class ModelSelect extends React.Component {
       const CreateComponent = this.props.CreateComponent
       modal = (
         <Provider value={this.props.createContext}>
-          <CreateComponent visible={!!this.state.createSelected} isModal onCreateCompleted={({ id }) => {
-            this.setState({ createSelected: false })
-            if (this.props.onChange) {
-              this.props.onChange(id)
-            }
-            return false
-          }} />
+          <CreateComponent
+            visible={!!this.state.createSelected}
+            isModal
+            onCreateCompleted={({ id }) => {
+              this.setState({ createSelected: false })
+              if (this.props.onChange) {
+                this.props.onChange(id)
+              }
+              return false
+            }}
+            onModalClosed={this.onModalClosed}
+          />
         </Provider>
       )
     }
