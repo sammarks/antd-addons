@@ -4,6 +4,7 @@
 /*.css
 !/.eslintrc.js
 !/.neutrinorc.js
+!/build.js
 
 # Logs
 logs

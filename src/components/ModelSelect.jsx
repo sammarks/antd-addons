@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SingleSelectButton from './SingleSelectButton'
+import '../styles/SelectButton.css'
 import { Provider } from './CRUDContext'
 import pick from 'lodash/pick'
 import get from 'lodash/get'

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SelectButton from './SelectButton'
+import '../styles/SelectButton.css'
 import pick from 'lodash/pick'
 import { Button } from 'antd'
 import { withNamespaces } from '../i18n'
