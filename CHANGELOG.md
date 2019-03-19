@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/sammarks/antd-addons/compare/v0.4.0...v0.5.0) (2019-03-19)
+
+
+### Features
+
+* Add ModelSelect component. ([d063751](https://github.com/sammarks/antd-addons/commit/d063751))
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/sammarks/antd-addons/compare/v0.3.1...v0.4.0) (2019-03-18)
 
