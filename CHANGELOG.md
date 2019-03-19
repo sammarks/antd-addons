@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.3"></a>
+## [0.5.3](https://github.com/sammarks/antd-addons/compare/v0.5.2...v0.5.3) (2019-03-19)
+
+
+### Bug Fixes
+
+* Add build config helpers, explicitly import CSS where requires. ([50e157b](https://github.com/sammarks/antd-addons/commit/50e157b))
+
+
+
 <a name="0.5.2"></a>
 ## [0.5.2](https://github.com/sammarks/antd-addons/compare/v0.5.0...v0.5.2) (2019-03-19)
 
