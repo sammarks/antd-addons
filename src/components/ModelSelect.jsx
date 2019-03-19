@@ -17,7 +17,8 @@ export default class ModelSelect extends React.Component {
     onChange: PropTypes.func,
     value: PropTypes.string,
     name: PropTypes.string.isRequired,
-    createContext: PropTypes.object
+    createContext: PropTypes.object,
+    disabled: PropTypes.bool
   }
 
   static defaultProps = {
@@ -68,7 +69,7 @@ export default class ModelSelect extends React.Component {
         {({ data }) => (
           <React.Fragment>
             <SingleSelectButton
-              {...pick(this.props, ['queryPath', 'name'])}
+              {...pick(this.props, ['queryPath', 'name', 'disabled'])}
               query={this.props.listQuery}
               getItemName={() => get(data, this.props.labelPath)}
               onCreate={onCreate}

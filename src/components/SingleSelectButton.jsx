@@ -16,7 +16,8 @@ export default class SingleSelectButton extends React.Component {
     value: PropTypes.object,
     onChange: PropTypes.func.isRequired,
     onCreate: PropTypes.func,
-    getItemName: PropTypes.func
+    getItemName: PropTypes.func,
+    disabled: PropTypes.bool
   }
 
   onChange = (values) => {
@@ -33,6 +34,7 @@ export default class SingleSelectButton extends React.Component {
         <Button
           icon={'plus'}
           onClick={this.props.onCreate}
+          disabled={this.props.disabled}
         >{this.props.t('SingleSelectButton.addItem', { name: this.props.name })}</Button>
       )
     }
@@ -42,7 +44,7 @@ export default class SingleSelectButton extends React.Component {
     return (
       <React.Fragment>
         <SelectButton
-          {...pick(this.props, ['query', 'queryPath', 'variables', 'name', 'getItemName'])}
+          {...pick(this.props, ['query', 'queryPath', 'variables', 'name', 'getItemName', 'disabled'])}
           onChange={this.onChange}
           maxSelection={1}
           value={[this.props.value].filter(Boolean)}

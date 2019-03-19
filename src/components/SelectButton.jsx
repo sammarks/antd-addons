@@ -17,7 +17,8 @@ export default class SelectButton extends React.Component {
     onChange: PropTypes.func.isRequired,
     maxSelection: PropTypes.number,
     getItemName: PropTypes.func,
-    renderLabel: PropTypes.func
+    renderLabel: PropTypes.func,
+    disabled: PropTypes.bool
   }
 
   static defaultProps = {
@@ -28,8 +29,8 @@ export default class SelectButton extends React.Component {
     if (itemNames) {
       return (
         <React.Fragment>
-          <strong>{this.props.t('SelectButton.selected', { name: this.props.name })}</strong>
-          <span> {itemNames}</span>
+          <strong>{this.props.t('SelectButton.selected', { name: this.props.name })} </strong>
+          <span>{itemNames}</span>
         </React.Fragment>
       )
     } else {
@@ -78,9 +79,14 @@ export default class SelectButton extends React.Component {
             overlayClassName={'filter-popover'}
             overlayStyle={{ width: 300 }}
           >
-            <Button type={this.buttonType}>{this.label}</Button>
+            <Button type={this.buttonType} disabled={this.props.disabled}>{this.label}</Button>
           </Popover>
-          {this.hasValue && <Button type={this.buttonType} onClick={this.clear} icon={'close'} />}
+          {this.hasValue && <Button
+            type={this.buttonType}
+            onClick={this.clear}
+            icon={'close'}
+            disabled={this.props.disabled}
+          />}
         </Button.Group>
       </div>
     )
