@@ -31,7 +31,6 @@ class EditPage extends React.Component {
     return (
       <CRUDContext.Consumer>
         {(context) => {
-          console.log('EditPage', context)
           const { fetchQuery, modelName, viewRoute } = context
           const refetchQueries = fetchQuery.definitions.map((def) => def.name.value)
           if (!this.id) return null
