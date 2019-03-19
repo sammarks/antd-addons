@@ -1,6 +1,6 @@
 import React from 'react'
 import { Query } from 'react-apollo'
-import { Skeleton } from 'antd'
+import { Skeleton, Typography } from 'antd'
 import ButtonList from './ButtonList'
 import LinkButton from './LinkButton'
 import _ from 'lodash'
@@ -34,7 +34,7 @@ export default class ViewPage extends React.Component {
                         <LinkButton path={editPath}>{this.props.t('ViewPage.edit')}</LinkButton>
                         <LinkButton path={deletePath}>{this.props.t('ViewPage.delete')}</LinkButton>
                       </ButtonList>
-                      <h1>{name}</h1>
+                      <Typography.Title>{name}</Typography.Title>
                       {content}
                     </React.Fragment>
                   )

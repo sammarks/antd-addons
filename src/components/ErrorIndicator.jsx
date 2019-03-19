@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from 'antd'
+import { Icon, Typography } from 'antd'
 import { withNamespaces } from '../i18n'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
@@ -19,7 +19,7 @@ class ErrorIndicator extends React.Component {
       <React.Fragment>
         <Icon type={'exclamation-circle'} theme={'filled'} />
         <div>
-          <h2>{this.props.t('ErrorIndicator.header')}</h2>
+          <Typography.Title level={2}>{this.props.t('ErrorIndicator.header')}</Typography.Title>
           <p>{this.props.t('ErrorIndicator.content')}</p>
         </div>
       </React.Fragment>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { message, Button, Modal } from 'antd'
+import { message, Button, Modal, Typography } from 'antd'
 import { Mutation, Query } from 'react-apollo'
 import _ from 'lodash'
 import { withRouter } from 'react-router-dom'
@@ -107,7 +107,7 @@ class DeletePage extends React.Component {
                     } else {
                       return (
                         <React.Fragment>
-                          <h1>{this.props.t('DeletePage.title', { model: modelName })}</h1>
+                          <Typography.Title>{this.props.t('DeletePage.title', { model: modelName })}</Typography.Title>
                           <p>
                             <Trans i18nKey={'DeletePage.message'} t={this.props.t} values={{ name: nameInner, model: modelName }}>
                               Are you sure you want to delete the <strong>{nameInner}</strong> {modelName}?
