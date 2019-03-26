@@ -7,7 +7,7 @@ import '../styles/SelectButton.css'
 import 'antd/lib/dropdown/style'
 
 @withNamespaces({
-  innerRef: (ref) => ref.props.selectRef(ref)
+  innerRef: (ref) => ref && ref.props.selectRef(ref)
 })
 export default class SelectButton extends React.Component {
   static propTypes = {
