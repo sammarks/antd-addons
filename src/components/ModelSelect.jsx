@@ -32,6 +32,16 @@ export default class ModelSelect extends React.Component {
     this.setState({ createSelected: true })
   }
 
+  setCreateVisibility (visible) {
+    this.setState({ createSelected: visible })
+  }
+
+  setSelectVisibility (visible) {
+    if (this._selectRef) {
+      this._selectRef.setPopoverVisibility(visible)
+    }
+  }
+
   onChange = (selected) => {
     this.props.onChange(selected ? selected.id : null)
   }
@@ -75,6 +85,9 @@ export default class ModelSelect extends React.Component {
               onCreate={onCreate}
               value={this.props.value ? { ...(data ? data.node : {}), id: this.props.value } : null}
               onChange={this.onChange}
+              selectRef={(c) => {
+                this._selectRef = c
+              }}
             />
             {modal}
           </React.Fragment>

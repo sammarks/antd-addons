@@ -17,6 +17,7 @@ export default class SingleSelectButton extends React.Component {
     onChange: PropTypes.func.isRequired,
     onCreate: PropTypes.func,
     getItemName: PropTypes.func,
+    selectRef: PropTypes.func,
     disabled: PropTypes.bool
   }
 
@@ -44,7 +45,7 @@ export default class SingleSelectButton extends React.Component {
     return (
       <React.Fragment>
         <SelectButton
-          {...pick(this.props, ['query', 'queryPath', 'variables', 'name', 'getItemName', 'disabled'])}
+          {...pick(this.props, ['query', 'queryPath', 'variables', 'name', 'getItemName', 'disabled', 'selectRef'])}
           onChange={this.onChange}
           maxSelection={1}
           value={[this.props.value].filter(Boolean)}

@@ -6,7 +6,9 @@ import { withNamespaces } from '../i18n'
 import '../styles/SelectButton.css'
 import 'antd/lib/dropdown/style'
 
-@withNamespaces()
+@withNamespaces({
+  innerRef: (ref) => ref.props.selectRef(ref)
+})
 export default class SelectButton extends React.Component {
   static propTypes = {
     query: PropTypes.object.isRequired,
@@ -18,11 +20,22 @@ export default class SelectButton extends React.Component {
     maxSelection: PropTypes.number,
     getItemName: PropTypes.func,
     renderLabel: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    selectRef: PropTypes.func
   }
 
   static defaultProps = {
     getItemName: (item) => item.name
+  }
+
+  state = { popoverVisible: false }
+
+  _onVisibleChange = (visible) => {
+    this.setState({ popoverVisible: visible })
+  }
+
+  setPopoverVisibility (visible) {
+    this.setState({ popoverVisible: visible })
   }
 
   renderLabel = (itemNames) => {
@@ -73,6 +86,8 @@ export default class SelectButton extends React.Component {
               maxSelection={this.props.maxSelection}
               selectionUpdated={this.props.onChange}
             />}
+            onVisibleChange={this._onVisibleChange}
+            visible={this.state.popoverVisible}
             title={this.props.t('SelectButton.select', { name: this.props.name })}
             trigger={'click'}
             placement={'bottomLeft'}
