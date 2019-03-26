@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.1"></a>
+## [0.8.1](https://github.com/sammarks/antd-addons/compare/v0.8.0...v0.8.1) (2019-03-26)
+
+
+### Bug Fixes
+
+* Make sure we account for when ref is not valid. ([f5bc491](https://github.com/sammarks/antd-addons/commit/f5bc491))
+
+
+
 <a name="0.8.0"></a>
 # [0.8.0](https://github.com/sammarks/antd-addons/compare/v0.7.0...v0.8.0) (2019-03-26)
 
