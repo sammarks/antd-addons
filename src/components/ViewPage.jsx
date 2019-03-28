@@ -14,9 +14,9 @@ export default class ViewPage extends React.Component {
   render () {
     return (
       <CRUDContext.Consumer>
-        {({ fetchQuery, modelName, deleteRoute, editRoute, namePath }) => {
+        {({ fetchQuery, modelName, deleteRoute, editRoute, namePath, idParam }) => {
           return (
-            <Query query={fetchQuery} variables={{ id: this.props.match.params.id }}>
+            <Query query={fetchQuery} variables={{ id: this.props.match.params[idParam] }}>
               {({ data: { node = {} } = {}, loading, error }) => {
                 if (loading || error) {
                   if (error) {
@@ -26,8 +26,9 @@ export default class ViewPage extends React.Component {
                 } else {
                   const name = _.get(node, namePath)
                   const content = this.props.children({ node })
-                  const deletePath = deleteRoute.replace(/:id/g, this.props.match.params.id)
-                  const editPath = editRoute.replace(/:id/g, this.props.match.params.id)
+                  const idRegex = new RegExp(`:${idParam}`, 'g')
+                  const deletePath = deleteRoute.replace(idRegex, this.props.match.params[idParam])
+                  const editPath = editRoute.replace(idRegex, this.props.match.params[idParam])
                   return (
                     <React.Fragment>
                       <ButtonList style={{ float: 'right' }}>

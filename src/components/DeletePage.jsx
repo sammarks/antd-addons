@@ -23,19 +23,15 @@ class DeletePage extends React.Component {
   static defaultProps = {
     additionalRefetchQueries: []
   }
-  get id () {
-    return (this.props.idOverride !== undefined)
-      ? this.props.idOverride
-      : this.props.match.params.id
-  }
   render () {
     return (
       <CRUDContext.Consumer>
-        {({ fetchQuery, modelName, namePath, listRoute }) => {
+        {({ fetchQuery, modelName, namePath, listRoute, idParam }) => {
+          const id = this.props.idOverride !== undefined ? this.props.idOverride : this.props.match.params[idParam]
           const refetchQueries = fetchQuery.definitions.map((def) => def.name.value)
-          if (!this.id) return null
+          if (!id) return null
           return (
-            <Query query={fetchQuery} variables={{ id: this.id }}>
+            <Query query={fetchQuery} variables={{ id: id }}>
               {({ data: { node = {} }, loading: fetchLoading }) => (
                 <Mutation
                   mutation={this.props.deleteQuery}
@@ -81,7 +77,7 @@ class DeletePage extends React.Component {
                       }
                     }
                     const submit = () => {
-                      deleteMutation({ variables: { id: this.id } })
+                      deleteMutation({ variables: { id } })
                     }
                     if (this.props.isModal) {
                       return (

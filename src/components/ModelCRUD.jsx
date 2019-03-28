@@ -18,8 +18,15 @@ export default class ModelCRUD extends React.Component {
     fetchQuery: PropTypes.object.isRequired,
     modelName: PropTypes.string.isRequired,
     namePath: PropTypes.string.isRequired,
+    idParam: PropTypes.string,
+    childRoutes: PropTypes.func,
+    routes: PropTypes.func,
     useBreadcrumbs: PropTypes.bool
   }
+  static defaultProps = {
+    idParam: 'id'
+  }
+
   renderBreadcrumbRoutes () {
     return (
       <Switch>
@@ -28,11 +35,11 @@ export default class ModelCRUD extends React.Component {
           title={this.props.t('ModelCRUD.create')}
           component={this.props.create}
         />
-        <CrumbRoute path={`${this.props.match.path}/:id`} title={(routeProps) => (
+        <CrumbRoute path={`${this.props.match.path}/:${this.props.idParam}`} title={(routeProps) => (
           <DynamicCrumb
             fetchQuery={this.props.fetchQuery}
             namePath={this.props.namePath}
-            id={routeProps.match.params.id}
+            id={routeProps.match.params[this.props.idParam]}
           />
         )} render={(routeProps) => (
           <Switch>
@@ -46,9 +53,11 @@ export default class ModelCRUD extends React.Component {
               title={this.props.t('ModelCRUD.delete')}
               component={this.props.delete}
             />
+            {this.props.childRoutes && this.props.childRoutes({ breadcrumb: true, routeProps })}
             <Route path={routeProps.match.path} component={this.props.view} />
           </Switch>
         )} />
+        {this.props.routes && this.props.routes({ breadcrumb: true })}
         <Route path={this.props.match.path} component={this.props.list} />
       </Switch>
     )
@@ -57,13 +66,15 @@ export default class ModelCRUD extends React.Component {
     return (
       <Switch>
         <Route path={`${this.props.match.path}/create`} component={this.props.create} />
-        <Route path={`${this.props.match.path}/:id`} render={(routeProps) => (
+        <Route path={`${this.props.match.path}/:${this.props.idParam}`} render={(routeProps) => (
           <Switch>
             <Route path={`${routeProps.match.path}/edit`} component={this.props.edit} />
             <Route path={`${routeProps.match.path}/delete`} component={this.props.delete} />
+            {this.props.childRoutes && this.props.childRoutes({ breadcrumb: false, routeProps })}
             <Route path={routeProps.match.path} component={this.props.view} />
           </Switch>
         )} />
+        {this.props.routes && this.props.routes({ breadcrumb: false })}
         <Route path={this.props.match.path} component={this.props.list} />
       </Switch>
     )
@@ -73,9 +84,9 @@ export default class ModelCRUD extends React.Component {
       ...this.props,
       listRoute: this.props.match.url,
       createRoute: `${this.props.match.url}/create`,
-      viewRoute: `${this.props.match.url}/:id`,
-      editRoute: `${this.props.match.url}/:id/edit`,
-      deleteRoute: `${this.props.match.url}/:id/delete`
+      viewRoute: `${this.props.match.url}/:${this.props.idParam}`,
+      editRoute: `${this.props.match.url}/:${this.props.idParam}/edit`,
+      deleteRoute: `${this.props.match.url}/:${this.props.idParam}/delete`
     }
     return (
       <CRUDContext.Provider value={context}>

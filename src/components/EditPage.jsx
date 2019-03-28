@@ -23,19 +23,16 @@ class EditPage extends React.Component {
   static defaultProps = {
     additionalRefetchQueries: []
   }
-  get id () {
-    if (this.props.idOverride !== undefined) return this.props.idOverride
-    return this.props.match.params.id
-  }
   render () {
     return (
       <CRUDContext.Consumer>
         {(context) => {
-          const { fetchQuery, modelName, viewRoute } = context
+          const { fetchQuery, modelName, viewRoute, idParam } = context
+          const id = this.props.idOverride !== undefined ? this.props.idOverride : this.props.match.params[idParam]
           const refetchQueries = fetchQuery.definitions.map((def) => def.name.value)
-          if (!this.id) return null
+          if (!id) return null
           return (
-            <Query query={fetchQuery} variables={{ id: this.id }}>
+            <Query query={fetchQuery} variables={{ id }}>
               {({ data: { node = {} } = {}, loading: fetchLoading }) => (
                 <Mutation
                   mutation={this.props.editQuery}
@@ -49,7 +46,8 @@ class EditPage extends React.Component {
                       }
                     }
                     if (shouldRedirect) {
-                      this.props.history.push(viewRoute.replace(/:id/g, data.id))
+                      const idRegex = new RegExp(`:${idParam}`, 'g')
+                      this.props.history.push(viewRoute.replace(idRegex, data.id))
                     }
                     this.props.form.resetFields()
                     if (this.props.onModalClosed) this.props.onModalClosed()
@@ -87,7 +85,7 @@ class EditPage extends React.Component {
                           let payload = {
                             variables: {
                               input: {
-                                id: this.id,
+                                id,
                                 patch: _.pickBy(values, (value, key) => node[key] !== value)
                               }
                             }

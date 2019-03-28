@@ -27,7 +27,7 @@ class CreatePage extends React.Component {
   render () {
     return (
       <CRUDContext.Consumer>
-        {({ modelName, viewRoute }) => {
+        {({ modelName, viewRoute, idParam }) => {
           const getFieldDecorator = this.props.form.getFieldDecorator
           return (
             <Mutation
@@ -42,7 +42,8 @@ class CreatePage extends React.Component {
                   }
                 }
                 if (shouldRedirect) {
-                  this.props.history.push(viewRoute.replace(/:id/g, data.id))
+                  const idRegex = new RegExp(`:${idParam}`, 'g')
+                  this.props.history.push(viewRoute.replace(idRegex, data.id))
                 }
                 this.props.form.resetFields()
                 if (this.props.onModalClosed) {
