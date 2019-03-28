@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0"></a>
+# [0.9.0](https://github.com/sammarks/antd-addons/compare/v0.8.1...v0.9.0) (2019-03-28)
+
+
+### Features
+
+* Add idParam, childRoutes, and routes to ModelCRUD component. ([b526d2e](https://github.com/sammarks/antd-addons/commit/b526d2e))
+
+
+
 <a name="0.8.1"></a>
 ## [0.8.1](https://github.com/sammarks/antd-addons/compare/v0.8.0...v0.8.1) (2019-03-26)
 
