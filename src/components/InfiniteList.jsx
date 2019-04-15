@@ -15,6 +15,7 @@ export default class InfiniteList extends React.Component {
     hasMore: PropTypes.bool,
     useWindow: PropTypes.bool,
     listProps: PropTypes.object,
+    scrollProps: PropTypes.object,
     compact: PropTypes.bool,
     showNoMore: PropTypes.bool
   }
@@ -22,7 +23,8 @@ export default class InfiniteList extends React.Component {
   static defaultProps = {
     useWindow: true,
     showNoMore: true,
-    listProps: {}
+    listProps: {},
+    scrollProps: {}
   }
 
   renderLoader () {
@@ -63,6 +65,7 @@ export default class InfiniteList extends React.Component {
         loadMore={this.props.loadMore}
         hasMore={!this.props.loading && this.props.hasMore}
         useWindow={this.props.useWindow}
+        {...this.props.scrollProps}
       >
         <List
           dataSource={this.props.data}

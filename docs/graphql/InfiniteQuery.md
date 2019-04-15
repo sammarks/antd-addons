@@ -16,6 +16,7 @@ from a GraphQL backend.
 - `compact` - See [InfiniteList](InfiniteList.md)
 - `showNoMore` - See [InfiniteList](InfiniteList.md)
 - `useWindow` - See [InfiniteList](InfiniteList.md)
+- `scrollProps` - See [InfiniteList](InfiniteList.md)
 
 ## Notes
 

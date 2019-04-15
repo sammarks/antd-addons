@@ -15,6 +15,7 @@ export default class InfiniteQuery extends React.Component {
     renderItem: PropTypes.func.isRequired,
     queryPath: PropTypes.string.isRequired,
     listProps: PropTypes.object,
+    scrollProps: PropTypes.object,
     first: PropTypes.number,
     compact: PropTypes.bool,
     showNoMore: PropTypes.bool,
@@ -56,6 +57,7 @@ export default class InfiniteQuery extends React.Component {
             data={edges}
             loading={loading}
             listProps={this.props.listProps}
+            scrollProps={this.props.scrollProps}
             hasMore={edges.length < totalRows}
             compact={this.props.compact}
             showNoMore={this.props.showNoMore}

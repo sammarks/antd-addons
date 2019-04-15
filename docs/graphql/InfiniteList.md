@@ -19,5 +19,6 @@ at the [InfiniteQuery component](InfiniteQuery.md) for a simpler example.
 - `useWindow` - A boolean indicating if we should use the window for the scroll
   bounds, or the container.
 - `listProps` - An object of properties to pass to the inner `<List>` component.
+- `scrollProps` - An object of properties to pass to the inner `<InfiniteScroll>` component. See [react-infinite-scroller](https://github.com/CassetteRocks/react-infinite-scroller) for details.
 - `compact` - A boolean indicating if the list should be displayed compact.
 - `showNoMore` - A boolean indicating if we should show a no more message.
