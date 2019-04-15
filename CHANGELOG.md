@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.0"></a>
+# [0.10.0](https://github.com/sammarks/antd-addons/compare/v0.9.1...v0.10.0) (2019-04-15)
+
+
+### Features
+
+* Add scrollProps to InfiniteList and InfiniteQuery. ([fb00755](https://github.com/sammarks/antd-addons/commit/fb00755))
+
+
+
 <a name="0.9.1"></a>
 ## [0.9.1](https://github.com/sammarks/antd-addons/compare/v0.9.0...v0.9.1) (2019-04-14)
 
