@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.11.0"></a>
+# [0.11.0](https://github.com/sammarks/antd-addons/compare/v0.10.0...v0.11.0) (2019-04-17)
+
+
+### Features
+
+* Update ModelCRUD to only render routes for components that were provided. ([68db24b](https://github.com/sammarks/antd-addons/commit/68db24b))
+
+
+
 <a name="0.10.0"></a>
 # [0.10.0](https://github.com/sammarks/antd-addons/compare/v0.9.1...v0.10.0) (2019-04-15)
 
