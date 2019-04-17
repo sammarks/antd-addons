@@ -10,11 +10,11 @@ import { withNamespaces } from '../i18n'
 @withNamespaces()
 export default class ModelCRUD extends React.Component {
   static propTypes = {
-    create: PropTypes.func.isRequired,
-    edit: PropTypes.func.isRequired,
-    view: PropTypes.func.isRequired,
-    list: PropTypes.func.isRequired,
-    delete: PropTypes.func.isRequired,
+    create: PropTypes.func,
+    edit: PropTypes.func,
+    view: PropTypes.func,
+    list: PropTypes.func,
+    delete: PropTypes.func,
     fetchQuery: PropTypes.object.isRequired,
     modelName: PropTypes.string.isRequired,
     namePath: PropTypes.string.isRequired,
@@ -30,11 +30,11 @@ export default class ModelCRUD extends React.Component {
   renderBreadcrumbRoutes () {
     return (
       <Switch>
-        <CrumbRoute
+        {this.props.create && <CrumbRoute
           path={`${this.props.match.path}/create`}
           title={this.props.t('ModelCRUD.create')}
           component={this.props.create}
-        />
+        />}
         <CrumbRoute path={`${this.props.match.path}/:${this.props.idParam}`} title={(routeProps) => (
           <DynamicCrumb
             fetchQuery={this.props.fetchQuery}
@@ -43,39 +43,39 @@ export default class ModelCRUD extends React.Component {
           />
         )} render={(routeProps) => (
           <Switch>
-            <CrumbRoute
+            {this.props.edit && <CrumbRoute
               path={`${routeProps.match.path}/edit`}
               title={this.props.t('ModelCRUD.edit')}
               component={this.props.edit}
-            />
-            <CrumbRoute
+            />}
+            {this.props.delete && <CrumbRoute
               path={`${routeProps.match.path}/delete`}
               title={this.props.t('ModelCRUD.delete')}
               component={this.props.delete}
-            />
+            />}
             {this.props.childRoutes && this.props.childRoutes({ breadcrumb: true, routeProps })}
-            <Route path={routeProps.match.path} component={this.props.view} />
+            {this.props.view && <Route path={routeProps.match.path} component={this.props.view} />}
           </Switch>
         )} />
         {this.props.routes && this.props.routes({ breadcrumb: true })}
-        <Route path={this.props.match.path} component={this.props.list} />
+        {this.props.list && <Route path={this.props.match.path} component={this.props.list} />}
       </Switch>
     )
   }
   renderRoutes () {
     return (
       <Switch>
-        <Route path={`${this.props.match.path}/create`} component={this.props.create} />
+        {this.props.create && <Route path={`${this.props.match.path}/create`} component={this.props.create} />}
         <Route path={`${this.props.match.path}/:${this.props.idParam}`} render={(routeProps) => (
           <Switch>
-            <Route path={`${routeProps.match.path}/edit`} component={this.props.edit} />
-            <Route path={`${routeProps.match.path}/delete`} component={this.props.delete} />
+            {this.props.edit && <Route path={`${routeProps.match.path}/edit`} component={this.props.edit} />}
+            {this.props.delete && <Route path={`${routeProps.match.path}/delete`} component={this.props.delete} />}
             {this.props.childRoutes && this.props.childRoutes({ breadcrumb: false, routeProps })}
-            <Route path={routeProps.match.path} component={this.props.view} />
+            {this.props.view && <Route path={routeProps.match.path} component={this.props.view} />}
           </Switch>
         )} />
         {this.props.routes && this.props.routes({ breadcrumb: false })}
-        <Route path={this.props.match.path} component={this.props.list} />
+        {this.props.list && <Route path={this.props.match.path} component={this.props.list} />}
       </Switch>
     )
   }
