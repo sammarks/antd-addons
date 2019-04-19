@@ -21,15 +21,19 @@ export default class ModelCRUD extends React.Component {
     idParam: PropTypes.string,
     childRoutes: PropTypes.func,
     routes: PropTypes.func,
-    useBreadcrumbs: PropTypes.bool
+    useBreadcrumbs: PropTypes.bool,
+    switchComponent: PropTypes.func,
+    switchProps: PropTypes.object
   }
   static defaultProps = {
-    idParam: 'id'
+    idParam: 'id',
+    switchProps: {}
   }
 
   renderBreadcrumbRoutes () {
+    const SwitchComponent = this.props.switchComponent || Switch
     return (
-      <Switch>
+      <SwitchComponent {...this.props.switchProps}>
         {this.props.create && <CrumbRoute
           path={`${this.props.match.path}/create`}
           title={this.props.t('ModelCRUD.create')}
@@ -59,7 +63,7 @@ export default class ModelCRUD extends React.Component {
         )} />
         {this.props.routes && this.props.routes({ breadcrumb: true })}
         {this.props.list && <Route path={this.props.match.path} component={this.props.list} />}
-      </Switch>
+      </SwitchComponent>
     )
   }
   renderRoutes () {
