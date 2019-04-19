@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.12.0"></a>
+# [0.12.0](https://github.com/sammarks/antd-addons/compare/v0.11.0...v0.12.0) (2019-04-19)
+
+
+### Features
+
+* Add switchComponent and switchProps support to ModelCRUD ([40ae0b1](https://github.com/sammarks/antd-addons/commit/40ae0b1))
+
+
+
 <a name="0.11.0"></a>
 # [0.11.0](https://github.com/sammarks/antd-addons/compare/v0.10.0...v0.11.0) (2019-04-17)
 
