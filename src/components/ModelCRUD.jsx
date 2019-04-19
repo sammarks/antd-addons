@@ -46,7 +46,7 @@ export default class ModelCRUD extends React.Component {
             id={routeProps.match.params[this.props.idParam]}
           />
         )} render={(routeProps) => (
-          <Switch>
+          <SwitchComponent {...this.props.switchProps}>
             {this.props.edit && <CrumbRoute
               path={`${routeProps.match.path}/edit`}
               title={this.props.t('ModelCRUD.edit')}
@@ -59,7 +59,7 @@ export default class ModelCRUD extends React.Component {
             />}
             {this.props.childRoutes && this.props.childRoutes({ breadcrumb: true, routeProps })}
             {this.props.view && <Route path={routeProps.match.path} component={this.props.view} />}
-          </Switch>
+          </SwitchComponent>
         )} />
         {this.props.routes && this.props.routes({ breadcrumb: true })}
         {this.props.list && <Route path={this.props.match.path} component={this.props.list} />}
