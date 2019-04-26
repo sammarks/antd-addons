@@ -12,6 +12,7 @@ export default class Query extends React.Component {
     children: PropTypes.func.isRequired,
     onError: PropTypes.func,
     loading: PropTypes.element,
+    forwardLoading: PropTypes.bool,
     error: PropTypes.element
   }
 
@@ -24,7 +25,7 @@ export default class Query extends React.Component {
     return (
       <ApolloQuery {...omit(this.props, Object.keys(Query.propTypes))}>
         {(queryResult) => {
-          if (queryResult.loading) {
+          if (queryResult.loading && !this.props.forwardLoading) {
             if (this.props.loading !== undefined) {
               return this.props.loading
             } else {
@@ -36,7 +37,7 @@ export default class Query extends React.Component {
               />
               return (<Spin indicator={icon} />)
             }
-          } else if (queryResult.data) {
+          } else if (queryResult.data || (queryResult.loading && this.props.forwardLoading)) {
             return this.props.children(queryResult)
           } else if (queryResult.error) {
             console.warn('Query error', queryResult.error)
