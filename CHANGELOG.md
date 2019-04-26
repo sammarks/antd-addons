@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.13.0"></a>
+# [0.13.0](https://github.com/sammarks/antd-addons/compare/v0.12.1...v0.13.0) (2019-04-26)
+
+
+### Features
+
+* Add forwardLoading to Query component to support sending loading state to children. ([30e88e0](https://github.com/sammarks/antd-addons/commit/30e88e0))
+
+
+
 <a name="0.12.1"></a>
 ## [0.12.1](https://github.com/sammarks/antd-addons/compare/v0.12.0...v0.12.1) (2019-04-19)
 
