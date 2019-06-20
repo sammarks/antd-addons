@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.14.0"></a>
+# [0.14.0](https://github.com/sammarks/antd-addons/compare/v0.13.0...v0.14.0) (2019-06-20)
+
+
+### Features
+
+* add contentProps support to SelectButton ([ca6d3b7](https://github.com/sammarks/antd-addons/commit/ca6d3b7))
+
+
+
 <a name="0.13.0"></a>
 # [0.13.0](https://github.com/sammarks/antd-addons/compare/v0.12.1...v0.13.0) (2019-04-26)
 
