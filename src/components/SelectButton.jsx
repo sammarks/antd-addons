@@ -21,11 +21,13 @@ export default class SelectButton extends React.Component {
     getItemName: PropTypes.func,
     renderLabel: PropTypes.func,
     disabled: PropTypes.bool,
-    selectRef: PropTypes.func
+    selectRef: PropTypes.func,
+    contentProps: PropTypes.object
   }
 
   static defaultProps = {
-    getItemName: (item) => item.name
+    getItemName: (item) => item.name,
+    contentProps: {}
   }
 
   state = { popoverVisible: false }
@@ -85,6 +87,7 @@ export default class SelectButton extends React.Component {
               selectedItems={this.props.value}
               maxSelection={this.props.maxSelection}
               selectionUpdated={this.props.onChange}
+              {...this.props.contentProps}
             />}
             onVisibleChange={this._onVisibleChange}
             visible={this.state.popoverVisible}
