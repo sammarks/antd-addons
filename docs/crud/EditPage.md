@@ -72,7 +72,7 @@ export default class Edit extends React.Component {
     return (
       <EditPage
         additionalRefetchQueries={['versions']}
-        createQuery={EditQuery}
+        editQuery={EditQuery}
         idPath={'updateVersion.version.id'}
         idOverride={this.props.id}
         {...this.props}
