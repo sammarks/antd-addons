@@ -17,6 +17,9 @@
 
 * [Using the CRUD Components](crud/guide.md)
 * [CRUDContext](crud/CRUDContext.md)
+* [CreatePage](crud/CreatePage.md)
+* [EditPage](crud/EditPage.md)
+* [DeletePage](crud/DeletePage.md)
 
 ## GraphQL Data
 
