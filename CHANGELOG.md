@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.15.0"></a>
+# [0.15.0](https://github.com/sammarks/antd-addons/compare/v0.14.0...v0.15.0) (2019-07-08)
+
+
+### Features
+
+* make the delete component optional in list tables ([811123e](https://github.com/sammarks/antd-addons/commit/811123e))
+
+
+
 <a name="0.14.0"></a>
 # [0.14.0](https://github.com/sammarks/antd-addons/compare/v0.13.0...v0.14.0) (2019-06-20)
 
