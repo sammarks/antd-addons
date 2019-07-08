@@ -211,10 +211,14 @@ export default class DataTable extends React.Component {
                     <a href={'javascript:;'} onClick={this.onEditClicked.bind(this, record)}>
                       {this.props.t('DataTable.edit')}
                     </a>
-                    <Divider type={'vertical'} />
-                    <a href={'javascript:;'} onClick={this.onDeleteClicked.bind(this, record)}>
-                      {this.props.t('DataTable.delete')}
-                    </a>
+                    {this.props.onDeleteClicked &&
+                      <React.Fragment>
+                        <Divider type={'vertical'} />
+                        <a href={'javascript:;'} onClick={this.onDeleteClicked.bind(this, record)}>
+                          {this.props.t('DataTable.delete')}
+                        </a>
+                      </React.Fragment>
+                    }
                   </span>
                 )} />
               </Table>

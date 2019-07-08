@@ -8,7 +8,7 @@ export default class ModalDataTable extends React.Component {
     createProps: PropTypes.object,
     EditComponent: PropTypes.func.isRequired,
     editProps: PropTypes.object,
-    DeleteComponent: PropTypes.func.isRequired,
+    DeleteComponent: PropTypes.func,
     deleteProps: PropTypes.object
   }
   static defaultProps = {
@@ -90,11 +90,11 @@ export default class ModalDataTable extends React.Component {
           {...this.props}
           onCreateClicked={this.onCreateClickedBound}
           onEditClicked={this.onEditClickedBound}
-          onDeleteClicked={this.onDeleteClickedBound}
+          onDeleteClicked={DeleteComponent && this.onDeleteClickedBound}
         />
         <CreateComponent {...this.createProps} />
         <EditComponent {...this.editProps} />
-        <DeleteComponent {...this.deleteProps} />
+        {DeleteComponent && <DeleteComponent {...this.deleteProps} />}
       </React.Fragment>
     )
   }
