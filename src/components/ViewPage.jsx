@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Query } from 'react-apollo'
 import { Skeleton, Typography } from 'antd'
 import ButtonList from './ButtonList'
@@ -11,6 +12,12 @@ import { withNamespaces } from '../i18n'
 @withRouter
 @withNamespaces()
 export default class ViewPage extends React.Component {
+  static propTypes = {
+    hideDelete: PropTypes.bool,
+    hideEdit: PropTypes.bool,
+    hideHeader: PropTypes.bool
+  }
+
   render () {
     return (
       <CRUDContext.Consumer>
@@ -31,11 +38,13 @@ export default class ViewPage extends React.Component {
                   const editPath = editRoute.replace(idRegex, this.props.match.params[idParam])
                   return (
                     <React.Fragment>
-                      <ButtonList style={{ float: 'right' }}>
-                        <LinkButton path={editPath}>{this.props.t('ViewPage.edit')}</LinkButton>
-                        <LinkButton path={deletePath}>{this.props.t('ViewPage.delete')}</LinkButton>
-                      </ButtonList>
-                      <Typography.Title>{name}</Typography.Title>
+                      {!this.props.hideHeader && (!this.props.hideDelete || !this.props.hideEdit) &&
+                        <ButtonList style={{ float: 'right' }}>
+                          <LinkButton path={editPath}>{this.props.t('ViewPage.edit')}</LinkButton>
+                          <LinkButton path={deletePath}>{this.props.t('ViewPage.delete')}</LinkButton>
+                        </ButtonList>
+                      }
+                      {!this.props.hideHeader && <Typography.Title>{name}</Typography.Title>}
                       {content}
                     </React.Fragment>
                   )

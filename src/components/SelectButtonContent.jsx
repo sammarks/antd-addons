@@ -120,7 +120,7 @@ export default styled(SelectButtonContent)`
     .ant-dropdown-menu-item-selected .ant-list-item-content { color: inherit; }
   }
   .search-input {
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid ${props => (props.theme && props.theme['@border-color-split']) || '#e8e8e8'};
     input {
       border: none;
       box-shadow: none;
