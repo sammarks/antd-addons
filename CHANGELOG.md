@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.16.2"></a>
+## [0.16.2](https://github.com/sammarks/antd-addons/compare/v0.16.1...v0.16.2) (2019-07-30)
+
+
+### Bug Fixes
+
+* support last 2 IE versions (IE 11 and IE 12) ([4b6d713](https://github.com/sammarks/antd-addons/commit/4b6d713))
+
+
+
 <a name="0.16.1"></a>
 ## [0.16.1](https://github.com/sammarks/antd-addons/compare/v0.16.0...v0.16.1) (2019-07-15)
 
