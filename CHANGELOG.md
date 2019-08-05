@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.16.3"></a>
+## [0.16.3](https://github.com/sammarks/antd-addons/compare/v0.16.2...v0.16.3) (2019-08-05)
+
+
+### Bug Fixes
+
+* automatically refetch when prop variables change ([93cfc22](https://github.com/sammarks/antd-addons/commit/93cfc22))
+
+
+
 <a name="0.16.2"></a>
 ## [0.16.2](https://github.com/sammarks/antd-addons/compare/v0.16.1...v0.16.2) (2019-07-30)
 
