@@ -26,7 +26,17 @@ export default class InfiniteQuery extends React.Component {
     first: 16
   }
 
+  componentDidUpdate (prevProps, prevState, snapshot) {
+    if (prevProps.variables !== this.props.variables) {
+      this.refetch()
+    }
+  }
+
   renderItem = (edge) => {
+    if (!edge.cursor) {
+      const queryName = get(this, 'props.query.definitions[0].name.value', '(could not get name)')
+      console.warn(`Edge does not contain a cursor! Infinite scrolling may not work in '${queryName}'`)
+    }
     return this.props.renderItem(edge.node)
   }
 
@@ -67,7 +77,8 @@ export default class InfiniteQuery extends React.Component {
                 return fetchMore({
                   variables: {
                     first: this.props.first,
-                    after: edges[edges.length - 1].cursor
+                    after: edges[edges.length - 1].cursor,
+                    ...this.props.variables
                   },
                   updateQuery: (previousResult, { fetchMoreResult }) => {
                     const connection = get(fetchMoreResult, this.props.queryPath)
