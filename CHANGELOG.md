@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.16.4"></a>
+## [0.16.4](https://github.com/sammarks/antd-addons/compare/v0.16.3...v0.16.4) (2019-08-30)
+
+
+### Bug Fixes
+
+* update peer dependencies ([681e0f7](https://github.com/sammarks/antd-addons/commit/681e0f7))
+
+
+
 <a name="0.16.3"></a>
 ## [0.16.3](https://github.com/sammarks/antd-addons/compare/v0.16.2...v0.16.3) (2019-08-05)
 
