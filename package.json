@@ -48,7 +48,7 @@
     "antd": "^3.14.0",
     "react": "^16.0.0",
     "react-apollo": "^3.0.1",
-    "react-i18next": "^10.12.2",
+    "react-i18next": "^9.0.10",
     "styled-components": "^4.0.0"
   },
   "dependencies": {
