@@ -1,6 +1,6 @@
 {
   "name": "react-antd-addons",
-  "version": "0.16.4",
+  "version": "0.16.5",
   "description": "Additional components built on top of the Ant Design Framework.",
   "main": "index.js",
   "scripts": {
