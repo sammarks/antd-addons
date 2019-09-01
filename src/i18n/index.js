@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { reactI18nextModule, withNamespaces as originalWithNamespaces } from 'react-i18next'
+import { initReactI18next, withNamespaces as originalWithNamespaces } from 'react-i18next'
 import resources from '../components/translation'
 
 if (i18n.isInitialized) {
@@ -8,7 +8,7 @@ if (i18n.isInitialized) {
   i18n.addResourceBundle('en', 'AntdAddons', resources.en.AntdAddons, true, true)
 } else {
   i18n
-    .use(reactI18nextModule)
+    .use(initReactI18next)
     .init({
       resources,
       ns: ['AntdAddons'],
