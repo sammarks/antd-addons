@@ -6,10 +6,10 @@ import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import ButtonList from './ButtonList'
 import CRUDContext from './CRUDContext'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 import { Trans } from 'react-i18next'
 
-@withNamespaces()
+@withTranslation()
 class DeletePage extends React.Component {
   static propTypes = {
     additionalRefetchQueries: PropTypes.arrayOf(PropTypes.string.isRequired),

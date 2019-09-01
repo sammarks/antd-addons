@@ -4,10 +4,10 @@ import { Switch, Route, withRouter } from 'react-router-dom'
 import CrumbRoute from './CrumbRoute'
 import CRUDContext from './CRUDContext'
 import DynamicCrumb from './DynamicCrumb'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 
 @withRouter
-@withNamespaces()
+@withTranslation()
 export default class ModelCRUD extends React.Component {
   static propTypes = {
     create: PropTypes.func,

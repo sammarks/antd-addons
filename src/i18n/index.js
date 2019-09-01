@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { initReactI18next, withNamespaces as originalWithNamespaces } from 'react-i18next'
+import { initReactI18next, withTranslation as originalWithTranslation } from 'react-i18next'
 import resources from '../components/translation'
 
 if (i18n.isInitialized) {
@@ -20,4 +20,4 @@ if (i18n.isInitialized) {
 }
 
 export default i18n
-export const withNamespaces = originalWithNamespaces.bind(null, 'AntdAddons')
+export const withTranslation = originalWithTranslation.bind(null, 'AntdAddons')

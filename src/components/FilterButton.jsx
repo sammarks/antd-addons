@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SelectButton from './SelectButton'
 import pick from 'lodash/pick'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 
-@withNamespaces()
+@withTranslation()
 export default class FilterButton extends React.Component {
   static propTypes = {
     query: PropTypes.object.isRequired,

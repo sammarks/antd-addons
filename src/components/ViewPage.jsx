@@ -7,10 +7,10 @@ import LinkButton from './LinkButton'
 import _ from 'lodash'
 import CRUDContext from './CRUDContext'
 import { withRouter } from 'react-router-dom'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 
 @withRouter
-@withNamespaces()
+@withTranslation()
 export default class ViewPage extends React.Component {
   static propTypes = {
     hideDelete: PropTypes.bool,

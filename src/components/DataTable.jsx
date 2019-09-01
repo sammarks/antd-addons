@@ -6,10 +6,10 @@ import { withRouter } from 'react-router-dom'
 import { Query } from 'react-apollo'
 import { offsetToCursor } from 'graphql-relay'
 import _ from 'lodash'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 
 @withRouter
-@withNamespaces()
+@withTranslation()
 export default class DataTable extends React.Component {
   static propTypes = {
     modelName: PropTypes.string.isRequired,

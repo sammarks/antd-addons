@@ -4,11 +4,11 @@ import { Icon, Input, List } from 'antd'
 import PropTypes from 'prop-types'
 import InfiniteQuery from './InfiniteQuery'
 import classnames from 'classnames'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 
 const FILTER_TIMEOUT = 500
 
-@withNamespaces()
+@withTranslation()
 class SelectButtonContent extends React.Component {
   static propTypes = {
     query: PropTypes.object.isRequired,

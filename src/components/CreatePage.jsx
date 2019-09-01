@@ -5,9 +5,9 @@ import _ from 'lodash'
 import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import CRUDContext from './CRUDContext'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 
-@withNamespaces()
+@withTranslation()
 class CreatePage extends React.Component {
   static propTypes = {
     createQuery: PropTypes.object.isRequired,

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Icon, Typography } from 'antd'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-@withNamespaces()
+@withTranslation()
 class ErrorIndicator extends React.Component {
   static propTypes = {
     compact: PropTypes.bool

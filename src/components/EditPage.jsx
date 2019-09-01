@@ -5,9 +5,9 @@ import _ from 'lodash'
 import { withRouter } from 'react-router-dom'
 import CRUDContext from './CRUDContext'
 import PropTypes from 'prop-types'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 
-@withNamespaces()
+@withTranslation()
 class EditPage extends React.Component {
   static propTypes = {
     editQuery: PropTypes.object.isRequired,

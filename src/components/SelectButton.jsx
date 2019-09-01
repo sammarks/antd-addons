@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Popover, Button } from 'antd'
 import SelectButtonContent from './SelectButtonContent'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 import '../styles/SelectButton.css'
 import 'antd/lib/dropdown/style'
 
-@withNamespaces({
+@withTranslation({
   innerRef: (ref) => ref && ref.props && ref.props.selectRef && ref.props.selectRef(ref)
 })
 export default class SelectButton extends React.Component {

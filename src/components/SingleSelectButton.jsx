@@ -4,9 +4,9 @@ import SelectButton from './SelectButton'
 import '../styles/SelectButton.css'
 import pick from 'lodash/pick'
 import { Button } from 'antd'
-import { withNamespaces } from '../i18n'
+import { withTranslation } from '../i18n'
 
-@withNamespaces()
+@withTranslation()
 export default class SingleSelectButton extends React.Component {
   static propTypes = {
     query: PropTypes.object.isRequired,
