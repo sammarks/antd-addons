@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/sammarks/antd-addons/compare/v0.16.7...v1.0.0) (2019-09-01)
+
+
+### Bug Fixes
+
+* continue upgrade to react-i18next v10 ([e536613](https://github.com/sammarks/antd-addons/commit/e536613))
+
+
+### BREAKING CHANGES
+
+* new peer dependencies: react-i18next v10
+
+
+
 <a name="0.16.7"></a>
 ## [0.16.7](https://github.com/sammarks/antd-addons/compare/v0.16.6...v0.16.7) (2019-09-01)
 
