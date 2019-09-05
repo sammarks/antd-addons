@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/sammarks/antd-addons/compare/v1.0.0...v1.1.0) (2019-09-05)
+
+
+### Features
+
+* add tableProps property to ModalDataTable for table customizations ([851a881](https://github.com/sammarks/antd-addons/commit/851a881))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/sammarks/antd-addons/compare/v0.16.7...v1.0.0) (2019-09-01)
 
