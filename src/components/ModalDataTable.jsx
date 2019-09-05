@@ -9,12 +9,14 @@ export default class ModalDataTable extends React.Component {
     EditComponent: PropTypes.func.isRequired,
     editProps: PropTypes.object,
     DeleteComponent: PropTypes.func,
-    deleteProps: PropTypes.object
+    deleteProps: PropTypes.object,
+    tableProps: PropTypes.object
   }
   static defaultProps = {
     createProps: {},
     editProps: {},
-    deleteProps: {}
+    deleteProps: {},
+    tableProps: {}
   }
   constructor (props) {
     super(props)

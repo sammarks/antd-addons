@@ -22,12 +22,14 @@ export default class DataTable extends React.Component {
     onDeleteClicked: PropTypes.func,
     additionalButtons: PropTypes.array,
     pageSize: PropTypes.number.isRequired,
-    bulkActions: PropTypes.arrayOf(PropTypes.object).isRequired
+    bulkActions: PropTypes.arrayOf(PropTypes.object).isRequired,
+    tableProps: PropTypes.object
   }
   static defaultProps = {
     additionalButtons: [],
     pageSize: 10,
-    bulkActions: []
+    bulkActions: [],
+    tableProps: {}
   }
   constructor (props) {
     super(props)
@@ -204,6 +206,7 @@ export default class DataTable extends React.Component {
                 }}
                 scroll={{ x: 800 }}
                 loading={loading}
+                {...this.props.tableProps}
               >
                 {this.props.children}
                 <Table.Column key={'actions'} align={'right'} render={(text, record) => (
