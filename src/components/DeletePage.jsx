@@ -113,7 +113,7 @@ class DeletePage extends React.Component {
                             <Button icon={'delete'} type={'danger'} loading={loading} onClick={submit}>
                               {this.props.t('DeletePage.delete')}
                             </Button>
-                            <a href={'javascript:;'} onClick={onCancel}>{this.props.t('DeletePage.cancel')}</a>
+                            <a onClick={onCancel}>{this.props.t('DeletePage.cancel')}</a>
                           </ButtonList>
                         </React.Fragment>
                       )

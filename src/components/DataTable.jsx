@@ -23,6 +23,8 @@ export default class DataTable extends React.Component {
     additionalButtons: PropTypes.array,
     pageSize: PropTypes.number.isRequired,
     bulkActions: PropTypes.arrayOf(PropTypes.object).isRequired,
+    hideCreate: PropTypes.bool,
+    hideEdit: PropTypes.bool,
     tableProps: PropTypes.object
   }
   static defaultProps = {
@@ -183,9 +185,9 @@ export default class DataTable extends React.Component {
             <React.Fragment>
               {this.bulkActionModals}
               <ButtonList>
-                <Button type={'primary'} icon={'plus'} onClick={this.onCreateClickedBound}>
+                {!this.props.hideCreate && <Button type={'primary'} icon={'plus'} onClick={this.onCreateClickedBound}>
                   {this.props.t('DataTable.add', { model: this.props.modelName })}
-                </Button>
+                </Button>}
                 {this.props.bulkActions.length > 0 && <Dropdown
                   overlay={this.bulkActionsMenu}
                   disabled={this.bulkActionsDisabled}
@@ -211,13 +213,13 @@ export default class DataTable extends React.Component {
                 {this.props.children}
                 <Table.Column key={'actions'} align={'right'} render={(text, record) => (
                   <span>
-                    <a href={'javascript:;'} onClick={this.onEditClicked.bind(this, record)}>
+                    {!this.props.hideEdit && <a onClick={this.onEditClicked.bind(this, record)}>
                       {this.props.t('DataTable.edit')}
-                    </a>
+                    </a>}
                     {this.props.onDeleteClicked &&
                       <React.Fragment>
                         <Divider type={'vertical'} />
-                        <a href={'javascript:;'} onClick={this.onDeleteClicked.bind(this, record)}>
+                        <a onClick={this.onDeleteClicked.bind(this, record)}>
                           {this.props.t('DataTable.delete')}
                         </a>
                       </React.Fragment>
