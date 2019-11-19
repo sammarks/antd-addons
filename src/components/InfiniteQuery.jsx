@@ -11,6 +11,7 @@ const DEFAULT_TOTAL_COUNT = 1000
 export default class InfiniteQuery extends React.Component {
   static propTypes = {
     query: PropTypes.object.isRequired,
+    queryProps: PropTypes.object,
     variables: PropTypes.object,
     renderItem: PropTypes.func.isRequired,
     queryPath: PropTypes.string.isRequired,
@@ -23,7 +24,8 @@ export default class InfiniteQuery extends React.Component {
   }
 
   static defaultProps = {
-    first: 16
+    first: 16,
+    queryProps: {}
   }
 
   componentDidUpdate (prevProps, prevState, snapshot) {
@@ -52,6 +54,7 @@ export default class InfiniteQuery extends React.Component {
         query={this.props.query}
         variables={{ ...this.props.variables, first: this.props.first }}
         notifyOnNetworkStatusChange
+        {...this.props.queryProps}
       >
         {({ data, loading, error, fetchMore, refetch }) => {
           if (error) {
