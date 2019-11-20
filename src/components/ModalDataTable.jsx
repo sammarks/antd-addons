@@ -57,21 +57,21 @@ export default class ModalDataTable extends React.Component {
   }
   get createProps () {
     return {
-      ...this.props.createProps,
       isModal: true,
       visible: this.state.createVisible,
-      onModalClosed: this.onCreateClosedBound,
-      onCreateCompleted: () => false
+      onCreateCompleted: () => false,
+      ...this.props.createProps,
+      onModalClosed: this.onCreateClosedBound
     }
   }
   get editProps () {
     return {
-      ...this.props.editProps,
       isModal: true,
       visible: this.state.editVisible,
       idOverride: this.state.editingId,
-      onModalClosed: this.onEditClosedBound,
-      onEditCompleted: () => false
+      onEditCompleted: () => false,
+      ...this.props.editProps,
+      onModalClosed: this.onEditClosedBound
     }
   }
   get deleteProps () {
