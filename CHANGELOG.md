@@ -1,6 +1,17 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.0.0](https://github.com/sammarks/antd-addons/compare/v1.4.0...v2.0.0) (2020-07-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* antd 4.0 upgrade
+
+### Features
+
+* antd 4.0 upgrade ([ba20a44](https://github.com/sammarks/antd-addons/commit/ba20a44f7c1ae058b2c668ff20096780a3046636))
 
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/sammarks/antd-addons/compare/v1.3.0...v1.4.0) (2019-11-20)
