@@ -27,7 +27,7 @@ the `:id` param to be `:version` instead.
 
 ```jsx
 import React from 'react'
-import { gql } from 'apollo-boost'
+import gql from 'graphql-tag'
 import { ModelCRUD } from 'react-antd-addons'
 import List from './List'
 import View from './View'

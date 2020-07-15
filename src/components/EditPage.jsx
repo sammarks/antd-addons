@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form, message, Modal, Button } from 'antd'
-import { Mutation, Query } from 'react-apollo'
+import { Mutation, Query } from '@apollo/client/react/components'
 import _ from 'lodash'
 import { withRouter } from 'react-router-dom'
 import CRUDContext from './CRUDContext'

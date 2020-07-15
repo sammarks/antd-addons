@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form, message, Modal, Button } from 'antd'
-import { Mutation } from 'react-apollo'
+import { Mutation } from '@apollo/client/react/components'
 import _ from 'lodash'
 import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'

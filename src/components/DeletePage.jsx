@@ -1,6 +1,6 @@
 import React from 'react'
 import { message, Button, Modal, Typography } from 'antd'
-import { Mutation, Query } from 'react-apollo'
+import { Mutation, Query } from '@apollo/client/react/components'
 import _ from 'lodash'
 import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'

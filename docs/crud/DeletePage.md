@@ -19,7 +19,7 @@ handling logic associated with deleting a node.
 ```jsx
 import React from 'react'
 import { DeletePage } from 'react-antd-addons'
-import { gql } from 'apollo-boost'
+import gql from 'graphql-tag'
 
 const DeleteQuery = gql`
   mutation delete($id: ID!) {

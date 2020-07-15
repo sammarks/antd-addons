@@ -49,7 +49,7 @@ render function.
 ```jsx
 import React from 'react'
 import { Button, Row, Col, Typography, Input } from 'antd'
-import { gql } from 'apollo-boost'
+import gql from 'graphql-tag'
 import { EditPage, FormItem, TailFormItem } from 'react-antd-addons'
 import PropTypes from 'prop-types'
 

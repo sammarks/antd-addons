@@ -5,7 +5,7 @@ import '../styles/SelectButton.css'
 import { Provider } from './CRUDContext'
 import pick from 'lodash/pick'
 import get from 'lodash/get'
-import { Query } from 'react-apollo'
+import { Query } from '@apollo/client/react/components'
 
 export default class ModelSelect extends React.Component {
   static propTypes = {

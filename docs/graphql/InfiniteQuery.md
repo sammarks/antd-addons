@@ -33,7 +33,7 @@ property.
 
 ```jsx
 import React from 'react'
-import { gql } from 'apollo-boost'
+import gql from 'graphql-tag'
 import { List } from 'antd'
 import InfiniteQuery from 'react-antd-addons/InfiniteQuery'
 

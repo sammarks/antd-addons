@@ -35,7 +35,7 @@ handling logic associated with creating a node.
 ```jsx
 import React from 'react'
 import { Button, Row, Col, Typography, Input } from 'antd'
-import { gql } from 'apollo-boost'
+import gql from 'graphql-tag'
 import { CreatePage, FormItem, TailFormItem } from 'react-antd-addons'
 
 export const CreateQuery = gql`

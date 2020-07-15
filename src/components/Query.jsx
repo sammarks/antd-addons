@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Query as ApolloQuery } from 'react-apollo'
+import { Query as ApolloQuery } from '@apollo/client/react/components'
 import omit from 'lodash/omit'
 import { Icon, Spin } from 'antd'
 import ErrorIndicator from './ErrorIndicator'
