@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/sammarks/antd-addons/compare/v2.0.1...v2.0.2) (2020-07-15)
+
+
+### Bug Fixes
+
+* LinkButton was referencing prop types that no longer exist ([76d30d8](https://github.com/sammarks/antd-addons/commit/76d30d83b1e11308763f674f7ec026b1ff7e4e64))
+
 ### [2.0.1](https://github.com/sammarks/antd-addons/compare/v2.0.0...v2.0.1) (2020-07-15)
 
 ## [2.0.0](https://github.com/sammarks/antd-addons/compare/v1.4.0...v2.0.0) (2020-07-15)
