@@ -17,7 +17,7 @@ export default class LinkButton extends React.Component {
     this.props.history.push(this.props.path)
   }
   get buttonProps () {
-    return _.pick(this.props, Object.keys(Button.propTypes).concat(['children', 'style']))
+    return _.omit(this.props, ['path'])
   }
   render () {
     return <Button onClick={this.onClickBound} {...this.buttonProps} />
