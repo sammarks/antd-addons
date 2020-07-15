@@ -1,5 +1,6 @@
 import React from 'react'
-import { Table, Divider, Button, Dropdown, Icon, Menu, Modal } from 'antd'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
+import { Table, Divider, Button, Dropdown, Menu, Modal } from 'antd'
 import ButtonList from './ButtonList'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
@@ -155,7 +156,7 @@ export default class DataTable extends React.Component {
         key={bulkAction.name}
         onClick={this.performBulkAction.bind(this, bulkAction)}
       >
-        <Icon type={bulkAction.icon} /> {bulkAction.name}
+        <LegacyIcon type={bulkAction.icon} /> {bulkAction.name}
       </Menu.Item>
     ))
     return (
@@ -185,14 +186,14 @@ export default class DataTable extends React.Component {
             <React.Fragment>
               {this.bulkActionModals}
               <ButtonList>
-                {!this.props.hideCreate && <Button type={'primary'} icon={'plus'} onClick={this.onCreateClickedBound}>
+                {!this.props.hideCreate && <Button type={'primary'} icon={<LegacyIcon type={'plus'} />} onClick={this.onCreateClickedBound}>
                   {this.props.t('DataTable.add', { model: this.props.modelName })}
                 </Button>}
                 {this.props.bulkActions.length > 0 && <Dropdown
                   overlay={this.bulkActionsMenu}
                   disabled={this.bulkActionsDisabled}
                 >
-                  <Button>{this.props.t('DataTable.bulkActions')} <Icon type={'down'} /></Button>
+                  <Button>{this.props.t('DataTable.bulkActions')} <LegacyIcon type={'down'} /></Button>
                 </Dropdown>}
                 {this.props.additionalButtons}
               </ButtonList>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form } from 'antd'
+import { Form } from '@ant-design/compatible'
 
 export default class TailFormItem extends React.Component {
   get tailFormItemLayout () {

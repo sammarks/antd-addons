@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Query as ApolloQuery } from '@apollo/client/react/components'
 import omit from 'lodash/omit'
-import { Icon, Spin } from 'antd'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
+import { Spin } from 'antd'
 import ErrorIndicator from './ErrorIndicator'
 
 export default class Query extends React.Component {
@@ -29,7 +30,7 @@ export default class Query extends React.Component {
             if (this.props.loading !== undefined) {
               return this.props.loading
             } else {
-              const icon = <Icon
+              const icon = <LegacyIcon
                 type={'loading'}
                 style={{ fontSize: 24, margin: 30 }}
                 spin

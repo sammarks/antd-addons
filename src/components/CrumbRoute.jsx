@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { BreadcrumbsItem } from 'react-breadcrumbs-dynamic'
-import { Icon } from 'antd'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
 import isFunction from 'lodash/isFunction'
 
 export default ({
@@ -16,7 +16,7 @@ export default ({
     if (icon) {
       children = (
         <React.Fragment>
-          <Icon type={icon} />
+          <LegacyIcon type={icon} />
           <span>{title}</span>
         </React.Fragment>
       )

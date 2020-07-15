@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import InfiniteScroll from 'react-infinite-scroller'
-import { Spin, Icon } from 'antd'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
+import { Spin } from 'antd'
 import List from './List'
 import { withTranslation } from '../i18n'
 
@@ -46,7 +47,7 @@ export default class InfiniteList extends React.Component {
     } else {
       return (
         <div style={{ width: '100%', textAlign: 'center', margin: '20px auto' }}>
-          <Icon
+          <LegacyIcon
             type={'exclamation-circle'}
             theme={'filled'}
             styled={{ opacity: 0.25, fontSize: 30, margin: '0 0 10px 0' }}

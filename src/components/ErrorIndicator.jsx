@@ -1,5 +1,6 @@
 import React from 'react'
-import { Icon, Typography } from 'antd'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
+import { Typography } from 'antd'
 import { withTranslation } from '../i18n'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
@@ -11,13 +12,13 @@ class ErrorIndicator extends React.Component {
   }
 
   renderCompact () {
-    return (<Icon type={'exclamation-circle'} theme={'filled'} />)
+    return <LegacyIcon type={'exclamation-circle'} theme={'filled'} />
   }
 
   renderFull () {
     return (
       <React.Fragment>
-        <Icon type={'exclamation-circle'} theme={'filled'} />
+        <LegacyIcon type={'exclamation-circle'} theme={'filled'} />
         <div>
           <Typography.Title level={2}>{this.props.t('ErrorIndicator.header')}</Typography.Title>
           <p>{this.props.t('ErrorIndicator.content')}</p>

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
 import { Popover, Button } from 'antd'
 import SelectButtonContent from './SelectButtonContent'
 import { withTranslation } from '../i18n'
@@ -102,7 +103,7 @@ export default class SelectButton extends React.Component {
           {this.hasValue && <Button
             type={this.buttonType}
             onClick={this.clear}
-            icon={'close'}
+            icon={<LegacyIcon type={'close'} />}
             disabled={this.props.disabled}
           />}
         </Button.Group>

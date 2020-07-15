@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Icon, Input, List } from 'antd'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
+import { Input, List } from 'antd'
 import PropTypes from 'prop-types'
 import InfiniteQuery from './InfiniteQuery'
 import classnames from 'classnames'
@@ -60,8 +61,8 @@ class SelectButtonContent extends React.Component {
   renderItem = (item) => {
     const selected = this.props.selectedItems.map((item) => item.id).includes(item.id)
     const icon = selected
-      ? <Icon type={'close-circle'} theme={'filled'} style={{ fontSize: 14 }} />
-      : <Icon type={'right'} style={{ fontSize: 10, padding: '2px' }} />
+      ? <LegacyIcon type={'close-circle'} theme={'filled'} style={{ fontSize: 14 }} />
+      : <LegacyIcon type={'right'} style={{ fontSize: 10, padding: '2px' }} />
     return (
       <List.Item
         extra={icon}
@@ -81,7 +82,7 @@ class SelectButtonContent extends React.Component {
       <div className={this.props.className}>
         <Input
           placeholder={this.props.t('SelectButtonContent.filter')}
-          suffix={<Icon type={'search'} />}
+          suffix={<LegacyIcon type={'search'} />}
           className={'search-input'}
           onChange={this.onFilterChange}
           value={this.state.filter}

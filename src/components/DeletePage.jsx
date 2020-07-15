@@ -1,4 +1,5 @@
 import React from 'react'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
 import { message, Button, Modal, Typography } from 'antd'
 import { Mutation, Query } from '@apollo/client/react/components'
 import _ from 'lodash'
@@ -88,7 +89,7 @@ class DeletePage extends React.Component {
                           onCancel={onCancel}
                           footer={[
                             <Button key={'cancel'} onClick={onCancel}>{this.props.t('DeletePage.cancel')}</Button>,
-                            <Button key={'submit'} type={'danger'} loading={loading} onClick={submit} icon={'delete'}>
+                            <Button key={'submit'} type={'danger'} loading={loading} onClick={submit} icon={<LegacyIcon type={'delete'} />}>
                               {this.props.t('DeletePage.delete')}
                             </Button>
                           ]}
@@ -110,7 +111,7 @@ class DeletePage extends React.Component {
                             </Trans>
                           </p>
                           <ButtonList>
-                            <Button icon={'delete'} type={'danger'} loading={loading} onClick={submit}>
+                            <Button icon={<LegacyIcon type={'delete'} />} type={'danger'} loading={loading} onClick={submit}>
                               {this.props.t('DeletePage.delete')}
                             </Button>
                             <a onClick={onCancel}>{this.props.t('DeletePage.cancel')}</a>

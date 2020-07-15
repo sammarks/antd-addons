@@ -1,5 +1,7 @@
 import React from 'react'
-import { Form, message, Modal, Button } from 'antd'
+import { Form, Icon as LegacyIcon } from '@ant-design/compatible'
+
+import { message, Modal, Button } from 'antd'
 import { Mutation, Query } from '@apollo/client/react/components'
 import _ from 'lodash'
 import { withRouter } from 'react-router-dom'
@@ -110,7 +112,7 @@ class EditPage extends React.Component {
                           onCancel={onCancel}
                           footer={[
                             <Button key={'cancel'} onClick={onCancel}>{this.props.t('EditPage.cancel')}</Button>,
-                            <Button key={'submit'} type={'primary'} loading={loading} onClick={submit} icon={'check'}>
+                            <Button key={'submit'} type={'primary'} loading={loading} onClick={submit} icon={<LegacyIcon type={'check'} />}>
                               {this.props.t('EditPage.submit', { model: modelName })}
                             </Button>
                           ]}

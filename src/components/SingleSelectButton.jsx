@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import SelectButton from './SelectButton'
 import '../styles/SelectButton.css'
 import pick from 'lodash/pick'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
 import { Button } from 'antd'
 import { withTranslation } from '../i18n'
 
@@ -33,7 +34,7 @@ export default class SingleSelectButton extends React.Component {
     if (this.props.onCreate && !this.hasValue) {
       return (
         <Button
-          icon={'plus'}
+          icon={<LegacyIcon type={'plus'} />}
           onClick={this.props.onCreate}
           disabled={this.props.disabled}
         >{this.props.t('SingleSelectButton.addItem', { name: this.props.name })}</Button>
