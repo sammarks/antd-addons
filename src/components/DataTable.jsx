@@ -205,7 +205,8 @@ export default class DataTable extends React.Component {
                 pagination={{
                   pageSize: this.props.pageSize,
                   current: this.state.currentPage,
-                  total: this.getQueryResults(data).totalCount
+                  total: this.getQueryResults(data).totalCount,
+                  showSizeChanger: false
                 }}
                 scroll={{ x: 800 }}
                 loading={loading}
