@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.4](https://github.com/sammarks/antd-addons/compare/v2.0.3...v2.0.4) (2020-07-31)
+
+
+### Bug Fixes
+
+* if there is no data in a query, return null ([4150498](https://github.com/sammarks/antd-addons/commit/41504984c2c9fbddc19da299f164e998444efe6a))
+
 ### [2.0.3](https://github.com/sammarks/antd-addons/compare/v2.0.2...v2.0.3) (2020-07-16)
 
 
