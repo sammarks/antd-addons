@@ -50,6 +50,8 @@ export default class Query extends React.Component {
             } else {
               return (<ErrorIndicator compact={this.props.errorCompact} />)
             }
+          } else {
+            return null
           }
         }}
       </ApolloQuery>
