@@ -75,7 +75,12 @@ export default class ModelSelect extends React.Component {
     }
 
     return (
-      <Query query={this.props.nodeQuery} variables={{ id: this.props.value }} fetchPolicy={'network-only'}>
+      <Query
+        query={this.props.nodeQuery}
+        variables={{ id: this.props.value || '' }}
+        skip={!this.props.value}
+        fetchPolicy={'network-only'}
+      >
         {({ data }) => (
           <React.Fragment>
             <SingleSelectButton
